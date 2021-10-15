@@ -1,0 +1,32 @@
+.nav-bar {
+  border-bottom: 4px solid black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 16px;
+}
+
+.nav-bar a:hover {
+  background: black;
+  color: white;
+}
