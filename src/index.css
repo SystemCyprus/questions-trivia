@@ -9,14 +9,11 @@ code {
 }
 
 .App {
+  text-align: center;
   min-width: 300px;
   max-width: 1024px;
   padding: 3rem;
   align-items: center;
   justify-content: center;
   margin: auto;
-}
-
-h1 {
-  text-align: center;
 }
