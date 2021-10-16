@@ -7,7 +7,7 @@ function NavBar() {
         <nav className="nav-bar">
             <ul>
                 <li><Link to="/">Random</Link></li>
-                <li><Link to="/options">Options</Link></li>
+                <li><Link to="/categorie">Categorie</Link></li>
                 <li><Link to="/extra">Extra</Link></li>
             </ul>
         </nav>

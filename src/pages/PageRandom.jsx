@@ -22,7 +22,8 @@ const PageRandom = () => {
 
     return (
         <>
-            <h1>Simple API question trivia aléatoire</h1>
+            <h1>Questions trivia</h1>
+            <button onClick={afficherQuestion}>Générer Aléatoire</button>
             <Card className="centered">
                 <Card.Content>
                     <Card.Header>Id</Card.Header>
@@ -40,7 +41,6 @@ const PageRandom = () => {
                     <Card.Description>{randomQuote.answer}</Card.Description>
                 </Card.Content>
             </Card>
-            <button onClick={afficherQuestion}>Question Aléatoire</button>
             <h2>{erreur}</h2>
         </>
     )

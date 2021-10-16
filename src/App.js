@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import PageExtra from './pages/PageExtra';
-import PageOptions from './pages/PageOptions';
+import PageOptions from './pages/PageCategorie';
 import PageRandom from './pages/PageRandom';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/" component={PageRandom} exact />
-          <Route path="/options" component={PageOptions} />
+          <Route path="/categorie" component={PageOptions} />
           <Route path="/extra" component={PageExtra} />
         </Switch>
       </div>

@@ -2,6 +2,9 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 
 const Quote = ({ quoteList, currentQuote }) => {
+
+    let date = new Date(quoteList[currentQuote].airdate);
+
     return (
         <Card className="centered">
             <Card.Content>
@@ -13,7 +16,7 @@ const Quote = ({ quoteList, currentQuote }) => {
                 <Card.Description>{quoteList[currentQuote].question}</Card.Description>
             </Card.Content>
             <Card.Content>
-                <Card.Description>DaterandomQuote.airdate</Card.Description>
+                <Card.Description>{date.toLocaleDateString("fr-CA", "yyyy-MM-dd")}</Card.Description>
             </Card.Content>
             <Card.Content>
                 <Card.Header>Réponse</Card.Header>

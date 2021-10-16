@@ -4,10 +4,11 @@ import Quote from '../components/Quote';
 
 const optionsCategorie = [
     { value: "25", key: "25", text: "Science" },
+    { value: "223", key: "223", text: "Word Origins" },
     { value: "114", key: "114", text: "History" },
     { value: "267", key: "267", text: "Food" },
     { value: "99", key: "99", text: "Religion" },
-    { value: "567", key: "567", text: "Literature" },
+    { value: "21", key: "21", text: "Animals" },
 ];
 
 const PageOptions = () => {
@@ -52,7 +53,7 @@ const PageOptions = () => {
 
     return (
         <>
-            <h1>Api avec des options</h1>
+            <h1>Choisir par catégorie</h1>
             <Select placeholder="Catégorie" options={optionsCategorie} onChange={onCategorieChange}></Select>
             <br /><br />
             <button onClick={questionPrecedente}>Question Précédente</button>
