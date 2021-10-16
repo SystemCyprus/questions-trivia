@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect  } from 'react'
 import { Card } from 'semantic-ui-react';
 
 const PageRandom = () => {
     const [randomQuote, setRandomQuote] = useState({});
     const [erreur, setErreur] = useState('');
-
+    
     const afficherQuestion = async () => {
         try {
             let response = await fetch('https://jservice.io/api/random');
@@ -16,10 +16,13 @@ const PageRandom = () => {
         }
     };
 
+    useEffect(() => {
+        afficherQuestion();
+    }, []);
+
     return (
         <>
             <h1>Simple API question trivia aléatoire</h1>
-            <button onClick={afficherQuestion}>Question Aléatoire</button>
             <Card className="centered">
                 <Card.Content>
                     <Card.Header>Id</Card.Header>
@@ -37,6 +40,7 @@ const PageRandom = () => {
                     <Card.Description>{randomQuote.answer}</Card.Description>
                 </Card.Content>
             </Card>
+            <button onClick={afficherQuestion}>Question Aléatoire</button>
             <h2>{erreur}</h2>
         </>
     )
