@@ -16,6 +16,7 @@ const Quote = ({ quoteList, currentQuote }) => {
                 <Card.Description>{quoteList[currentQuote].question}</Card.Description>
             </Card.Content>
             <Card.Content>
+                <Card.Header>Date de Parution</Card.Header>
                 <Card.Description>{date.toLocaleDateString("fr-CA", "yyyy-MM-dd")}</Card.Description>
             </Card.Content>
             <Card.Content>

@@ -20,6 +20,8 @@ const PageRandom = () => {
         afficherQuestion();
     }, []);
 
+    let date = new Date(randomQuote.airdate);
+
     return (
         <>
             <h1>Questions trivia</h1>
@@ -34,7 +36,8 @@ const PageRandom = () => {
                     <Card.Description>{randomQuote.question}</Card.Description>
                 </Card.Content>
                 <Card.Content>
-                    <Card.Description>Date{randomQuote.airdate}</Card.Description>
+                    <Card.Header>Date de Parution</Card.Header>
+                    <Card.Description>{date.toLocaleDateString("fr-CA", "yyyy-MM-dd")}</Card.Description>
                 </Card.Content>
                 <Card.Content>
                     <Card.Header>Réponse</Card.Header>

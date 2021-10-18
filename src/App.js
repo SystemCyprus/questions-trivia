@@ -13,7 +13,8 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/" component={PageRandom} exact />
-          <Route path="/categorie" component={PageOptions} />
+          <Route path="/categorie" component={PageOptions} exact />
+          <Route path="/categorie/:categorieId" component={PageOptions} />
           <Route path="/extra" component={PageExtra} />
         </Switch>
       </div>
