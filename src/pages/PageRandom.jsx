@@ -2,9 +2,12 @@ import React, { useState, useEffect  } from 'react'
 import { Card } from 'semantic-ui-react';
 
 const PageRandom = () => {
+    // state qui contient l'objet de la question retournee par le fetch
     const [randomQuote, setRandomQuote] = useState({});
+    // state pour afficher une erreur lors du fetch, s'il y a lieu
     const [erreur, setErreur] = useState('');
     
+    // simple fetch pour aller chercher un json a partir de l'api, qui contient une question aleatoire
     const afficherQuestion = async () => {
         try {
             let response = await fetch('https://jservice.io/api/random');
@@ -16,12 +19,16 @@ const PageRandom = () => {
         }
     };
 
+    // hook useEffect pour loader notre api au moment de l'affichage, avec un tableau de dependences vide pour ne pas le loader sans cesse
     useEffect(() => {
         afficherQuestion();
     }, []);
 
+    // variable pour formatter la date
     let date = new Date(randomQuote.airdate);
 
+    // ici on affiche la question aleatoire dans un Card de semantic-ui
+    // on utilise pas le composant Quote vu que c'est pas tout a fait pareil et les differences ferait juste compliquer qqch de si simple
     return (
         <>
             <h1>Questions trivia</h1>
@@ -44,6 +51,8 @@ const PageRandom = () => {
                     <Card.Description>{randomQuote.answer}</Card.Description>
                 </Card.Content>
             </Card>
+
+            {/* si il y a erreur, elle sera affichee */}
             <h2>{erreur}</h2>
         </>
     )

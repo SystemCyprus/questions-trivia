@@ -1,8 +1,11 @@
 import React from 'react'
 import { Card } from 'semantic-ui-react'
 
+// composant fonctionnel qu'on peut reutiliser pour afficher nos questions
+// recoit comme prop une liste de questions ainsi que le numero de la question qu'on veut afficher
 const Quote = ({ quoteList, currentQuote }) => {
 
+    // variable pour formatter la date
     let date = new Date(quoteList[currentQuote].airdate);
 
     return (
