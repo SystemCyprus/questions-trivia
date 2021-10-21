@@ -1,5 +1,6 @@
 import React, { useState, useEffect  } from 'react'
 import { Card } from 'semantic-ui-react';
+import '../components/textBox.css';
 
 const PageRandom = () => {
     // state qui contient l'objet de la question retournee par le fetch
