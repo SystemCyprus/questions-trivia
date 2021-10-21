@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  color: teal;
+  color: white;
 
 }
 
@@ -36,7 +36,7 @@ table{
 }
 
 th{
-    background-color: gainsboro;
+    background-color: indigo;
 }
 
 .offsetCategories {

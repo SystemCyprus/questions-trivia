@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import '../components/textBox.css';
+
 
 const PageExtra = () => {
 
@@ -29,6 +31,9 @@ const PageExtra = () => {
 
     return (
         <>
+            <div className="text-box">
+                <h1>Extra</h1>
+            </div>
             {/* simple page avec titre et tableau pour afficher les categories, que l'on pourra cliquer pour voir leurs questions */}
             <h1>Catégories aditionnelles</h1>
             <label>Début: {offset} (100 items)</label>

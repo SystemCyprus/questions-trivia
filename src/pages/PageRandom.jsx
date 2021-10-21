@@ -32,7 +32,9 @@ const PageRandom = () => {
     // on utilise pas le composant Quote vu que c'est pas tout a fait pareil et les differences ferait juste compliquer qqch de si simple
     return (
         <>
-            <h1>Questions trivia</h1>
+            <div className="text-box">
+                <h1>Trivia</h1>
+            </div>
             <button onClick={afficherQuestion}>Générer Aléatoire</button>
             <Card className="centered">
                 <Card.Content>

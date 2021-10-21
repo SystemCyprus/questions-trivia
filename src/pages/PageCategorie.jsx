@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router';
 import { Label, Select } from 'semantic-ui-react';
 import Quote from '../components/Quote';
+import '../components/textBox.css';
+
 
 // tableau pour les categories du Select de semantic-ui
 const optionsCategorie = [
@@ -69,8 +71,11 @@ const PageOptions = () => {
 
     return (
         <>
+            <div className="text-box">
+                <h1>Catégorie</h1>
+            </div>
             {/* si on a un parametre url( venant de la page extra), on affiche le titre de la categorie, sinon on offre un choix de qqes categories */}
-            <h1>{categorieId ? "Catégorie: " + titreCategorie : 'Catégories populaires'}</h1>
+            <h1>{categorieId ? titreCategorie : 'populaires'}</h1>
 
             {/* on indque le nombre de questions dans la categorie actuelle */}
             <label>{quoteList.length} questions dans cette categorie</label><br />
